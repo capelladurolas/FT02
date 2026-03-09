@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Notas</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="container p-4">
-    <!-- b) Aplicação para adicionar notas -->
-    <h2 class="mb-3">Notas</h2>
-    <div class="input-group mb-3">
-        <input type="text" id="n" class="form-control" placeholder="Nova nota...">
-        <button onclick="add()" class="btn btn-primary">Adicionar</button>
-    </div>
-    <ul id="l" class="list-group"></ul>
 
-    <script>
-        function add() {
-            const i = document.getElementById('n');
-            if (i.value) {
-                document.getElementById('l').innerHTML += `<li class="list-group-item">${i.value}</li>`;
-                i.value = '';
-            }
-        }
-    </script>
+<body class="container p-4">
+
+<h2 class="mb-3">Notas</h2>
+
+<div class="input-group mb-3">
+    <input type="text" id="n" class="form-control" placeholder="Nova nota...">
+    <button onclick="add()" class="btn btn-primary">Adicionar</button>
+</div>
+
+<ul id="l" class="list-group"></ul>
+
+<script>
+function add() {
+    const i = document.getElementById('n');
+
+    if (i.value) {
+        document.getElementById('l').innerHTML += 
+        `<li class="list-group-item">${i.value}</li>`;
+        i.value = '';
+    }
+}
+</script>
+
 </body>
 </html>
