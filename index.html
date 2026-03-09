@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notas</title>
+    <!-- c) Biblioteca de estilização Bootstrap -->
     <link href="https://cdn.jsdelivr.net" rel="stylesheet">
 </head>
-<body class="p-3">
-  <input id="i" class="form-control mb-2">
-  <button onclick="document.getElementById('l').innerHTML += `<li>${document.getElementById('i').value}</li>`" class="btn btn-primary">Add Nota</button>
-  <ul id="l" class="mt-3"></ul>
+<body class="container p-4">
+    <!-- b) Aplicação para adicionar notas -->
+    <h2 class="mb-3">Notas</h2>
+    <div class="input-group mb-3">
+        <input type="text" id="n" class="form-control" placeholder="Nova nota...">
+        <button onclick="add()" class="btn btn-primary">Adicionar</button>
+    </div>
+    <ul id="l" class="list-group"></ul>
+
+    <script>
+        function add() {
+            const i = document.getElementById('n');
+            if (i.value) {
+                document.getElementById('l').innerHTML += `<li class="list-group-item">${i.value}</li>`;
+                i.value = '';
+            }
+        }
+    </script>
 </body>
 </html>
