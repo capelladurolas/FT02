@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+</head>
+<body class="p-3">
+  <input id="i" class="form-control mb-2">
+  <button onclick="document.getElementById('l').innerHTML += `<li>${document.getElementById('i').value}</li>`" class="btn btn-primary">Add Nota</button>
+  <ul id="l" class="mt-3"></ul>
+</body>
+</html>
